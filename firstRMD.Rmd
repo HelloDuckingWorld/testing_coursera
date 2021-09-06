@@ -1,0 +1,72 @@
+---
+title: "My first R Markdown"
+author: "Yongmin"
+date: '2021 9 6 '
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+    RMD   --> PDF(Knit)
+1. HEADER --> Header rendered as the title
+2. TEXT --> Text section rendered as formatted text
+3. CODE CHUNK
+   --> Code rendered as the input code AND the output of running          the code chunk
+   
+**This is how you do bold!**  
+*This is how you do italics!*  
+
+# Header Level 1
+
+## Header Level 2  
+
+### Header Level 3  
+
+type directly for inserting code chunk
+```{r}
+summary(mtcars)
+```
+
+or use insert tab on the above
+```{r}
+summary(iris)
+```
+
+or type ctrl + alt + i
+```{r}
+mymat <- matrix(c(1,2,3,4,5,6,7,8,9), nrow = 3)
+mymat
+```
+you can run code chucnk all in the same time
+by pressing ctrl + shift + enter
+```{r}
+x <- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+y <- c(10, 9, 8, 7, 6, 5, 4, 3, 2, 1)
+plot(x, y)
+```
+
+[links](https://google.com)  
+or run inline `r mean(mtcars$mpg)`  
+
